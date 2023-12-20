@@ -8,6 +8,14 @@ public class Shape {
     public void addPoint(Point point) {
         Points.add(point);
     }
+    /*
+    public void getElements() {
+        for(Point pnt: Points) {
+            System.out.println(pnt);
+        }
+    }
+    */
+
     // calculatePerimeter()
 
     // getAverageSide()
