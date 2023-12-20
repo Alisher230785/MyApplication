@@ -17,8 +17,26 @@ public class Shape {
     */
 
     // calculatePerimeter()
-
+    public double calculatePerimeter() {
+        double perimeter = 0;
+        int rightPoint = 0;
+        for(int i = 0;i<Points.size();i++) {
+            rightPoint = (rightPoint + 1) % Points.size();
+            perimeter += Points.get(i).distance(Points.get(rightPoint));
+        }
+        return perimeter;
+    }
     // getAverageSide()
 
-    // getLongestSide()
+    public double getLongestSide() {
+        double maxPerimeterSide = 0;
+        int rightPoint = 0;
+        for (int i = 0;i<Points.size();i++) {
+            rightPoint = (rightPoint + 1) % Points.size();
+            if(Points.get(i).distance(Points.get(rightPoint)) > maxPerimeterSide) {
+                maxPerimeterSide = Points.get(i).distance(Points.get(rightPoint));
+            }
+        }
+        return maxPerimeterSide;
+    }
 }
